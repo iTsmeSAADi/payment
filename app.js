@@ -8,7 +8,9 @@ var http = require('http').Server(app);
 const paymentRoute = require('./routes/addCard');
 const port = process.env.PORT;
 
-app.use('/',paymentRoute);
+app.use('/', paymentRoute);
+
+
 
 mongoose
   .connect(process.env.MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })

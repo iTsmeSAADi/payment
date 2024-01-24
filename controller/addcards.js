@@ -6,7 +6,6 @@ const stripe = require('stripe')(SECRET_KEY)
 const createCustomer = async(req,res)=>{
 
     try {
-
         const customer = await stripe.customers.create({
           name:req.body.name,
             email:req.body.email, 
